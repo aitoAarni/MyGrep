@@ -1,0 +1,3 @@
+/home/aare/coding/my_project/build/CMakeFiles/mygrep.dir
+/home/aare/coding/my_project/build/CMakeFiles/edit_cache.dir
+/home/aare/coding/my_project/build/CMakeFiles/rebuild_cache.dir
