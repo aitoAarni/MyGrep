@@ -1,4 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
+#include <string_view>
 
-std::string search_file(std::string filename);
+std::vector<std::string> search_file(const std::string& filename);
