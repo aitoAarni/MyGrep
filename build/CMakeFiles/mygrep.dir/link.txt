@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/mygrep.dir/src/main.cpp.o CMakeFiles/mygrep.dir/src/search_file.cpp.o -o mygrep 
