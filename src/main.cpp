@@ -9,14 +9,14 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::string pattern{argv[1]};
+    std::string_view pattern{argv[1]};
     std::string directory{argv[2]};
 
     std::cout << "Starting mygrep...\n";
     std::cout << "Pattern to find: " << pattern << "\n";
     std::cout << "Directory to search: " << directory << "\n";
 
-    search_file(directory);
+    search_files(directory, pattern);
 
     return 0;
 }
