@@ -50,12 +50,14 @@ std::vector<LineMatch> search_pattern(const fs::directory_entry& file, const std
         if (found_match == line.end()) continue;
         std::vector<int> match_starts;
         while (found_match != line.end()) {
-            int column_num {static_cast<int>(std::distance(line.begin(), found_match)) + 1};
+            int column_num {static_cast<int>(std::distance(line.begin(), found_match))};
             match_starts.push_back(column_num);
             std::advance(found_match, match.size());
             found_match = std::search(found_match, line.end(), match.begin(), match.end());
         }
         matches.emplace_back(line, std::move(match_starts), line_num, match.size());
+        std::cout << "printing LineMatch" << "\n";
+        std::cout << matches.back() << "\n";
     }
     return matches;
 }
