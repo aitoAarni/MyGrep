@@ -16,7 +16,10 @@ int main(int argc, char* argv[]) {
     std::cout << "Pattern to find: " << pattern << "\n";
     std::cout << "Directory to search: " << directory << "\n";
 
-    search_files(directory, pattern);
+    auto matches = search_files(directory, pattern);
+    for (const auto& match: matches) {
+        std::cout << match << "\n";
+    }
 
     return 0;
 }
