@@ -13,7 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF) # Disables compiler-specific extensions to keep co
 
 # 4. Tell CMake to create an executable named 'mygrep' 
 # using the source code found in 'src/main.cpp'
-add_executable(mygrep src/main.cpp src/search_file.cpp src/program_manager.cpp)
+add_executable(mygrep src/main.cpp src/search_file.cpp src/parse_args.cpp)
 
 # 5. (Optional but recommended) Turn on strict compiler warnings.
 # This is the CMake equivalent of "-Wall -Wextra -Wpedantic"
