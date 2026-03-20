@@ -3,6 +3,7 @@
 #include <string>
 #include "search_file.hpp"
 #include "parse_args.hpp"
+#include "handle_output.hpp"
 
 int main(int argc, char* argv[]) {
     if (argc < 3) {
@@ -19,9 +20,8 @@ int main(int argc, char* argv[]) {
     std::cout << args << "\n";
 
     auto matches = search_files(args.directory, args.pattern);
-    for (const auto& match: matches) {
-        std::cout << match << "\n";
-    }
+    auto handle_output = HandleOutput(matches, args);
+    handle_output.print_results();
 
     return 0;
 }
